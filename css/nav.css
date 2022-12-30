@@ -1,0 +1,70 @@
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: calc(100% - 2px);
+  height: 50px;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border: 0px solid rgba(255, 255, 255, 0.3);
+  margin: 0;
+}
+nav .company {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+nav .company img {
+  transition-duration: 250ms;
+  width: 50px;
+}
+nav .company img:hover {
+  position: relative;
+  width: 55px;
+}
+nav .company a {
+  text-decoration: none;
+  color: white;
+}
+nav .links {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .links .link {
+  transition-duration: 250ms;
+  display: inline-block;
+  padding: 0 10px;
+  gap: 2px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .links .link a {
+  text-decoration: none;
+  color: white;
+}
+nav .links .link i {
+  transition-duration: 250ms;
+  font-size: 0;
+}
+nav .links .link:hover {
+  font-size: 1.15rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0 20px;
+}
+nav .links .link:hover i {
+  font-size: 0.75rem;
+  margin-right: 5px;
+}

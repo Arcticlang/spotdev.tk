@@ -1,0 +1,52 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  height: calc(100vh - 71px);
+  margin: 0;
+}
+.hero .section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.hero .section1 .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero .section1 .title h1 {
+  margin: 0;
+  font-size: 5rem;
+}
+.hero .section1 .title h4 {
+  font-size: 1.15rem;
+  margin: 0;
+  color: #ddd;
+}
+.hero .section1 .title a {
+  color: white;
+}
+.hero .section2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .section2 .code {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.63);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.2px);
+  -webkit-backdrop-filter: blur(8.2px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0 10px;
+  min-width: 500px;
+  min-height: 300px;
+}
+.hero .section2 .code .language-ts {
+  background: transparent;
+}

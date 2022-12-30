@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Spot</title>
+        <link rel="icon" type="image/x-icon" href="/images/spot.svg" />
+
+        <!-- JS -->
+
+        <script
+            src="https://kit.fontawesome.com/fa7fdc7b9f.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+        />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script src="/js/jquery.js"></script>
+
+        <script>hljs.highlightAll();</script>
+
+        <script>
+            $(function () {
+                $("#navbar-placeholder").load("navbar.html");
+            });
+        </script>
+
+        <!-- End of JS -->
+
+        <!-- CSS -->
+
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/nav.css" />
+        <link rel="stylesheet" href="/css/index.css" />
+
+        <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/atom-one-dark.css">
+
+        <!-- End of CSS -->
+    </head>
+    <body>
+        <div id="navbar-placeholder"></div>
+        <div class="main-content">
+            <div class="hero">
+                <div class="section1">
+                    <div class="title">
+                        <h1>
+                            Spot
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
+                                width="25"
+                            />
+                        </h1>
+                        <h4>Take the hassle out of creating a Discord bot.</h4>
+                        <h4>
+                            Get started by creating the
+                            <a href="/docs/example">example</a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="section2">
+                    <div class="code">
+                        <pre><code class="language-ts">import {Spot, Command, CommandListener, EventListener, Event, Message } from "discord-spot";
+                        
+@CommandListener
+@EventListener
+class TestBot extends Spot {                   
+    constructor() {
+        super();
+                        
+        this.run();
+    }     
+
+    @Event("ready")
+    onReady(spot: Spot) {
+        console.log("Bot is ready.")
+    }
+
+    @Command("ping")
+    flip(spot: Spot, message: Message, args: string[]) {
+        message.reply("Pong!");
+    }
+}
+                        
+new TestBot();</code></pre>
+                    </div>
+                </div>
+                <div class="section3"></div>
+                <div class="section4"></div>
+            </div>
+        </div>
+    </body>
+</html>
