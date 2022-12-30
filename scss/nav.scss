@@ -20,6 +20,7 @@ nav {
     -webkit-backdrop-filter: blur(11.5px);
     border: $navbar-border-width solid rgba(255, 255, 255, 0.3);
     margin: 0;
+    z-index: 99999;
 
     & .company {
         display: flex;

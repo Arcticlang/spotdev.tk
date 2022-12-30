@@ -5,7 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Spot</title>
-        <link rel="icon" type="image/x-icon" href="/images/spot.svg" />
+        <link rel="icon" type="image/x-icon" href="/images/spot-light.svg" />
+
+        <meta name="keywords" content="discord, typescript, javascript, bot, discordbot">
+        <meta name="description" content="Take the hassle out of creating a discord bot.">
+        <meta name="author" content="Spot">
+
+        <meta property="og:title" content="Spot - Creating Discord bots made easier." />
+        <meta property="og:description" content="Take the hassle out of creating a discord bot." />
+        <meta property="og:image" content="/images/spot-light.png" />
+        <meta property="og:site_name" content="Spot" />
+
+        <meta name="twitter:title" content="Spot">
+        <meta name="twitter:description" content="Take the hassle out of creating a discord bot.">
+        <meta name="twitter:image" content="/images/spot-light.png">
 
         <!-- JS -->
 
@@ -19,6 +32,7 @@
         />
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
         <script src="/js/jquery.js"></script>
+        <script src="/js/index.js"></script>
 
         <script>hljs.highlightAll();</script>
 
@@ -59,9 +73,14 @@
                             <a href="/docs/example">example</a>
                         </h4>
                     </div>
+                    <div class="buttons">
+                        <a href="https://www.npmjs.com/package/discord-spot" target="_blank" class="npm"><i class="fa-brands fa-npm"></i> npm</a>
+                        <a href="https://www.github.com/DiscordSpot/Spot" target="_blank" class="github"><i class="fa-brands fa-github"></i> Github</a>
+                    </div>
                 </div>
                 <div class="section2">
                     <div class="code">
+                        <button class="copy"><i class="fa-solid fa-clipboard"></i> <span>Copy</span></button>
                         <pre><code class="language-ts">import {Spot, Command, CommandListener, EventListener, Event, Message } from "discord-spot";
                         
 @CommandListener
@@ -88,8 +107,17 @@ new TestBot();</code></pre>
                     </div>
                 </div>
                 <div class="section3"></div>
-                <div class="section4"></div>
+                <div class="section4">
+                    <div class="title">
+                        <h1>Make a bot in <span class="underline">notime. <i class="fa-solid fa-clock"></i></span></h1>
+                        <h4>Making a bot has never been faster.</h4>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <script>
+            copy_btn()
+        </script>
     </body>
 </html>

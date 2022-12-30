@@ -1,3 +1,15 @@
+body {
+    overflow: hidden;
+
+    background: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHw2fHxuaWdodCUyMGxhbmRzY2FwZXxlbnwwfHx8fDE2NzI0MzcwMDg&ixlib=rb-4.0.3&q=80&w=1080) 0 0 no-repeat,
+        linear-gradient(
+            rgba(255, 255, 255, 1) 25%,
+            rgba(0, 0, 0, 1) 100%
+        );
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
 .hero {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -9,6 +21,7 @@
     & .section1 {
         display: flex;
         flex-direction: column;
+        position: relative;
 
         justify-content: center;
         align-items: center;
@@ -34,6 +47,56 @@
                 color: white;
             }
         }
+
+        @keyframes slideinleft {
+            from {
+                right: 500px;
+                transform: rotateZ(-20deg);
+            }
+            to {
+                right: 0;
+            }
+        }
+
+        animation: slideinleft 1s;
+
+        & .buttons {
+            margin-top: 50px;
+
+            .npm {
+                font-size: 1.5rem;
+                border-radius: 15px;
+                padding: 10px 10px;
+                //border: white solid 2px;
+                text-decoration: none;
+                font-family: Gilroy;
+                /* From https://css.glass */
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid rgba(255, 0, 0, 0.3);
+                background: linear-gradient(#aa0000aa, #cc0000aa);
+                color: white;
+            }
+
+            .github {
+                font-size: 1.5rem;
+                border-radius: 15px;
+                padding: 10px 10px;
+                //border: white solid 2px;
+                text-decoration: none;
+                font-family: Gilroy;
+                /* From https://css.glass */
+                background: rgba(9, 7, 20, 0.65);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid rgba(9, 7, 20, 0.3);
+                color: white;
+            }
+        }
     }
 
     & .section2 {
@@ -43,21 +106,104 @@
 
         & .code {
             /* From https://css.glass */
-            background: rgba(0, 0, 0, 0.63);
+            background: rgba(0, 0, 0, 0.8);
             border-radius: 16px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(8.2px);
             -webkit-backdrop-filter: blur(8.2px);
             border: 1px solid rgba(0, 0, 0, 0.3);
             padding: 0 10px;
+            position: relative;
 
             min-width: 500px;
             min-height: 300px;
 
             & .language-ts {
+                position: relative;
+                top: 20px;
                 background: transparent;
-                
+            }
+
+            @keyframes slidein {
+                0% {
+                    left: 1000px;
+                }
+                1% {
+                    left: 1000px;
+                    transform: rotateZ(-15deg) rotateY(20deg);
+                }
+                100% {
+                    left: 0;
+                }
+            }
+
+            & .copy {
+                transition-duration: 250ms;
+                //aspect-ratio: 1;
+                padding: 5px 5px;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                color: white;
+                /* From https://css.glass */
+                background: rgba(0, 0, 0, 0.1);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5.8px);
+                -webkit-backdrop-filter: blur(5.8px);
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                border: #222 solid 2px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            animation: slidein 2s;
+        }
+    }
+
+    & .section4 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        justify-content: center;
+        align-items: center;
+        color: white;
+
+        & .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & h1 {
+                margin: 0;
+                font-size: 3rem;
+            }
+
+            & h4 {
+                font-size: 1.5rem;
+                margin: 0;
+                color: #ddd;
+            }
+
+            & a {
+                color: white;
             }
         }
+
+        @keyframes slideintop {
+            0% {
+                top: 1000px;
+            }
+            1% {
+                top: 1000px;
+                transform: rotateZ(-15deg) rotateY(20deg);
+            }
+            100% {
+                top: 0;
+            }
+        }
+
+        animation: slideintop 1.5s;
     }
 }
